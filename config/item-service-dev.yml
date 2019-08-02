@@ -12,6 +12,11 @@ eureka:
       defaultZone: http://localhost:2003/eureka,http://localhost:2002/eureka,http://localhost:2001/eureka
   server:
     enable-self-preservation: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
 ---
 spring:
   profiles: item1
