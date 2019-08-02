@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: item-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2003/eureka,http://localhost:2002/eureka,http://localhost:2001/eureka
+  server:
+    enable-self-preservation: false
+---
+spring:
+  profiles: item1
+server:  port: 8001
+--- 
+spring:
+  profiles: item2
+server:
+  port: 8002   
